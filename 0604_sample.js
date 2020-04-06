@@ -6,7 +6,7 @@ exports.handler = async (event) => {
         let data = await ddb.scan({
             TableName: "hirutest"
         }).promise();
-
+        console.log(data);
     } catch (err) {
         // error handling goes here
     };
@@ -19,7 +19,7 @@ exports.handler = async (event) => {
                 colour: "ll"
             }
         }).promise();
-
+        console.log(data);
     } catch (err) {
         // error handling goes here
     };
