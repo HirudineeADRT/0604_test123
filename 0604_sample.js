@@ -11,5 +11,19 @@ exports.handler = async (event) => {
         // error handling goes here
     };
 
+    try {
+        let data = await ddb.get({
+            TableName: "hirutest",
+            Key: {
+                price: "ll",
+                colour: "ll"
+            }
+        }).promise();
+
+    } catch (err) {
+        // error handling goes here
+    };
+
+
     return { "message": "Successfully executed" };
 };
